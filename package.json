@@ -25,7 +25,7 @@
     "test-automation"
   ],
   "author": "Playwright Spec Based Framework Contributors",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
