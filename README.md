@@ -1,6 +1,15 @@
 # AI Automation Framework
 
+**LinkedIn-ready subtitle:** Spec-driven API test automation with OpenSpec + OpenAPI + Playwright, including auto-generated tests, traceable requirements, and report-ready outputs.
+
 A spec-driven automation framework that combines OpenSpec change artifacts, OpenAPI contracts, and Playwright-based verification. This repository is focused on practical patterns you can reuse and extend.
+
+## Project Outcomes
+
+- Converts OpenSpec scenarios into executable Playwright API tests.
+- Keeps implementation aligned with API contract and spec artifacts.
+- Produces verifiable test evidence through Playwright + Allure + dashboard outputs.
+- Demonstrates a reusable workflow teams can adapt for regression-safe API delivery.
 
 ## Project Overview
 
@@ -82,6 +91,16 @@ Reports produced by this repository:
 - `allure-report/index.html` (when generated)
 - `reports/enhanced-dashboard.html` (when generated)
 - `reports/spec-coverage.json` (when generated)
+
+### Sample Evidence for Portfolio / LinkedIn
+
+After running `npm run report`, include these artifacts in your post or repository preview:
+
+- Allure report entry point: [`allure-report/index.html`](./allure-report/index.html)
+- Enhanced dashboard: [`reports/enhanced-dashboard.html`](./reports/enhanced-dashboard.html)
+- Spec coverage JSON: [`reports/spec-coverage.json`](./reports/spec-coverage.json)
+
+> Tip: Capture 1–2 screenshots (Allure summary + dashboard) and attach them to your LinkedIn post for stronger proof.
 
 ## OpenSpec Workflow
 
