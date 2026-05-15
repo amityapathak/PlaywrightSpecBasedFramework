@@ -1,22 +1,30 @@
 {
   "name": "ai-automation-framework",
   "version": "1.0.0",
-  "description": "",
+  "description": "Spec-driven Playwright automation framework for OpenSpec + OpenAPI workflows",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/server.js",
     "generate-tests": "node ./utils/generate-tests.js",
     "test:generated": "npx playwright test tests/generated --config playwright.config.ts",
-    "test": "npx playwright test",
+    "test": "npx playwright test tests/api tests/generated",
     "test:allure": "npx playwright test --config playwright.config.ts --reporter=allure-playwright",
     "allure:generate": "npx allure generate allure-results -o allure-report",
     "allure:open": "npx allure open allure-report",
     "coverage:check": "node ./utils/check-coverage.js",
     "dashboard": "node ./utils/generate-tests.js && node ./utils/generate-enhanced-dashboard.js",
-    "report": "npm run test:allure && npm run allure:generate && npm run dashboard"
+    "report": "npm run test:allure && npm run allure:generate && npm run dashboard",
+    "install:browsers": "npx playwright install"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "playwright",
+    "openspec",
+    "openapi",
+    "api-testing",
+    "spec-driven-testing",
+    "test-automation"
+  ],
+  "author": "Playwright Spec Based Framework Contributors",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
