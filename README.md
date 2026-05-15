@@ -6,8 +6,6 @@
 ![OpenSpec](https://img.shields.io/badge/openspec-spec--driven-4F46E5)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-**LinkedIn-ready subtitle:** Spec-driven API test automation with OpenSpec + OpenAPI + Playwright, including auto-generated tests, traceable requirements, and report-ready outputs.
-
 A spec-driven automation framework that combines OpenSpec change artifacts, OpenAPI contracts, and Playwright-based verification. This repository is focused on practical patterns you can reuse and extend.
 
 ## Why This Project Stands Out
@@ -120,31 +118,6 @@ Reports produced by this repository:
 - `allure-report/index.html` (when generated)
 - `reports/enhanced-dashboard.html` (when generated)
 - `reports/spec-coverage.json` (when generated)
-
-## LinkedIn Portfolio Checklist
-
-Use this checklist to publish a strong project showcase:
-
-1. Run `npm run report` and capture:
-   - Allure summary screenshot
-   - Enhanced dashboard screenshot
-   - Terminal output showing test pass results
-2. Add 3 bullets in your post:
-   - Problem solved (spec drift and regression risk)
-   - Approach (OpenSpec + OpenAPI + Playwright)
-   - Measurable proof (test/report artifacts)
-3. Include repo link and 2–3 key commands from this README.
-
-### Suggested LinkedIn Post Template
-
-> Built a spec-driven API automation framework using OpenSpec + OpenAPI + Playwright.
-> 
-> ✔ Auto-generated API tests from requirement specs  
-> ✔ Contract-aligned verification  
-> ✔ Allure + custom dashboard reporting for traceable evidence
-> 
-> Stack: Node.js, Playwright, OpenAPI, OpenSpec  
-> Repo: <your-link>
 
 ## OpenSpec Workflow
 
