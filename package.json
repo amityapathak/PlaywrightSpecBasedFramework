@@ -1,0 +1,27 @@
+{
+  "name": "ai-automation-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "generate-tests": "node ./utils/generate-tests.js",
+    "test:generated": "npx playwright test tests/generated --config playwright.config.ts",
+    "test": "npx playwright test",
+    "test:allure": "npx playwright test --config playwright.config.ts --reporter=allure-playwright",
+    "allure:generate": "npx allure generate allure-results -o allure-report",
+    "allure:open": "npx allure open allure-report",
+    "coverage:check": "node ./utils/check-coverage.js",
+    "dashboard": "node ./utils/generate-tests.js && node ./utils/generate-enhanced-dashboard.js",
+    "report": "npm run test:allure && npm run allure:generate && npm run dashboard"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.7.0",
+    "allure-playwright": "^3.0.0-beta.12"
+  }
+}
