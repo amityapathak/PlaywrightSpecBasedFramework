@@ -1,8 +1,37 @@
 # AI Automation Framework
 
+![Node.js](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)
+![Playwright](https://img.shields.io/badge/playwright-api%20testing-2EAD33?logo=playwright&logoColor=white)
+![OpenAPI](https://img.shields.io/badge/openapi-contract--first-6BA539)
+![OpenSpec](https://img.shields.io/badge/openspec-spec--driven-4F46E5)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 **LinkedIn-ready subtitle:** Spec-driven API test automation with OpenSpec + OpenAPI + Playwright, including auto-generated tests, traceable requirements, and report-ready outputs.
 
 A spec-driven automation framework that combines OpenSpec change artifacts, OpenAPI contracts, and Playwright-based verification. This repository is focused on practical patterns you can reuse and extend.
+
+## Why This Project Stands Out
+
+- ✅ **Spec-to-test traceability:** requirements in `openspec/` drive executable API tests.
+- ✅ **Contract alignment:** tests validate behavior against `openapi/swagger.yaml`.
+- ✅ **Portfolio evidence:** Allure + dashboard artifacts are generated for shareable proof.
+- ✅ **Reusable pattern:** lightweight generator workflow that can be extended to new endpoints.
+
+## Architecture at a Glance
+
+```text
+OpenSpec change artifacts (.md)
+        │
+        ├──> utils/generate-tests.js
+        │         │
+        │         └──> tests/generated/*.spec.ts
+        │
+OpenAPI contract (swagger.yaml)
+        │
+        └──> Playwright API tests (tests/api + tests/generated)
+                          │
+                          └──> Allure + enhanced dashboard reports
+```
 
 ## Project Outcomes
 
@@ -21,7 +50,7 @@ A spec-driven automation framework that combines OpenSpec change artifacts, Open
 - `tests/`: Playwright test suites.
 - `playwright.config.ts`: Playwright test runner configuration.
 
-## Getting Started
+## Quick Start
 
 ### Prerequisites
 
@@ -37,7 +66,7 @@ npm install
 ### Install Playwright browsers
 
 ```bash
-npx playwright install
+npm run install:browsers
 ```
 
 > Playwright UI/browser tests require browser binaries. Run the install command once per environment.
@@ -92,15 +121,30 @@ Reports produced by this repository:
 - `reports/enhanced-dashboard.html` (when generated)
 - `reports/spec-coverage.json` (when generated)
 
-### Sample Evidence for Portfolio / LinkedIn
+## LinkedIn Portfolio Checklist
 
-After running `npm run report`, include these artifacts in your post or repository preview:
+Use this checklist to publish a strong project showcase:
 
-- Allure report entry point: [`allure-report/index.html`](./allure-report/index.html)
-- Enhanced dashboard: [`reports/enhanced-dashboard.html`](./reports/enhanced-dashboard.html)
-- Spec coverage JSON: [`reports/spec-coverage.json`](./reports/spec-coverage.json)
+1. Run `npm run report` and capture:
+   - Allure summary screenshot
+   - Enhanced dashboard screenshot
+   - Terminal output showing test pass results
+2. Add 3 bullets in your post:
+   - Problem solved (spec drift and regression risk)
+   - Approach (OpenSpec + OpenAPI + Playwright)
+   - Measurable proof (test/report artifacts)
+3. Include repo link and 2–3 key commands from this README.
 
-> Tip: Capture 1–2 screenshots (Allure summary + dashboard) and attach them to your LinkedIn post for stronger proof.
+### Suggested LinkedIn Post Template
+
+> Built a spec-driven API automation framework using OpenSpec + OpenAPI + Playwright.
+> 
+> ✔ Auto-generated API tests from requirement specs  
+> ✔ Contract-aligned verification  
+> ✔ Allure + custom dashboard reporting for traceable evidence
+> 
+> Stack: Node.js, Playwright, OpenAPI, OpenSpec  
+> Repo: <your-link>
 
 ## OpenSpec Workflow
 
